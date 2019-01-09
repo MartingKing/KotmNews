@@ -1,0 +1,59 @@
+/* components/tab-view/tab-view.wxss */
+.tab-view {
+  position: relative;
+  background-color: #FAFAFA;
+  height: 100vh;
+}
+.tab-view-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80rpx;
+  z-index: 9999;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 1px;
+  border-bottom: 1px solid whitesmoke;
+}
+
+.tab-view-item {
+  flex: 1;
+  line-height: 80rpx;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0 15rpx;
+}
+
+.tab-view-title {
+  margin: 0 auto;
+  width: max-content;
+  max-width: 100%;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+
+.tab-view-cursor-area {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+}
+
+.tab-view-cursor {
+  height: 2px;
+  background-color: red;
+  border-radius: 1px;
+}
+.tab-view-swiper {
+  position: relative;
+  height: 100%;
+}
+.tab-view-scroll-view {
+  height: 100%;
+  width: 100%;
+}

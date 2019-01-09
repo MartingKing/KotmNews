@@ -1,0 +1,25 @@
+<!--components/tab-view/tab-view.wxml-->
+<!-- wx:if='{{tabTitles && tabTitles.length > 1}}' -->
+<view wx:if='{{tabs && tabs.length > 1}}' class='tab-view' style='{{componentStyle}}'>
+  <view class='tab-view-container' style='background-color: {{tabBackgroundColor}};'>
+    <view wx:if='{{tabCenter}}' style='flex: 1;'></view>
+    <view id='{{index == 0 ? "tab" : ""}}' wx:for='{{tabs}}' wx:key class='tab-view-item' style='color: {{_tabIndex == index ? selectedColor : color}}; {{_tabIndex == index && highlight ? "font-size: 30rpx; font-weight: bold;" : "font-size: 28rpx;"}}' bindtap='_swicthTabEvent'
+      data-index='{{index}}'>
+      <view id='{{"tabTitle" + index}}' class='tab-view-title'>{{item}}</view>
+    </view>
+    <view wx:if='{{tabCenter}}' style='flex: 1;'></view>
+  </view>
+  <view wx:if='{{showCursor}}' class="tab-view-cursor-area" style='top: {{80 - cursorDeviate}}rpx;'>
+    <view id='cursor' animation="{{_tabAnimation}}" class="tab-view-cursor" style='width: {{cursorWidthMode == "title" ? _titleWidths[_tabIndex] : (cursorWidthMode == "tab" ? _tabWidth : "60r")}}px; margin-left: {{_cursorPosition}}px;'></view>
+  </view>
+  <swiper class='tab-view-swiper' bindchange='_pageChangeEvent' current='{{_tabIndex}}' duration="{{duration}}">
+    <block wx:for="{{tabs}}" wx:key wx:for-index="pageindex">
+      <swiper-item>
+        <scroll-view class='tab-view-scroll-view' scroll-y enable-back-to-top bindscrolltolower='_scrolltolowerEvent'>
+          <view style='height: 80rpx; border-bottom: 2px solid transparent;'></view>
+          <slot name='{{"tabviewpage" + pageindex}}'></slot>
+        </scroll-view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>

@@ -1,0 +1,20 @@
+/**detail.wxss**/
+@import "/wxParse/wxParse.wxss";
+
+.detail_title {
+  font-size: 38rpx;
+  justify-content: center;
+  color: #181818;
+  margin-right: 60rpx;
+  margin-left: 60rpx;
+  display: flex;
+  font-style:italic;
+  margin-bottom: 60rpx;
+  margin-top: 40rpx;
+}
+
+.detail-container {
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  margin-bottom: 60rpx;
+}

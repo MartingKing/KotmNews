@@ -1,0 +1,21 @@
+<!--pages/tabview/tabview.wxml-->
+<tab-view id='mytabview' tabs='{{tabs}}' bindpagechange="pageChangeEvent" bindscrolltobottom='scrolltobottomEvent'>
+  <view wx:for='{{slotIds}}' wx:key wx:for-index='slotindex' wx:for-item='slotitem' slot='{{slotitem}}'>
+    <navigator class='order-item' url="../detail/detail?id={{orderitem.urlObjectId}}" wx:for='{{newsList}}' wx:key wx:for-item='orderitem'>
+      <view wx:if="{{orderitem.frontImageUrl==='images'}}">
+        <image src="../../images/pic-default.png" class="news_image" mode="aspectFill" />
+      </view>
+      <view wx:else>
+        <image src="{{orderitem.frontImageUrl}}" class="news_image" mode="aspectFill" /> </view>
+      <view class="content_container">
+        <text class='news_title news_text'>{{orderitem.title}}</text>
+        <view class='news_text_style'>
+          <text class="news_text_author">{{orderitem.authorName}}</text>
+          <text class="news_text_time">{{orderitem.publishTime}}</text>
+        </view>
+      </view>
+    </navigator>
+    <view class='loading' hidden='{{isloading}}'>正在加载...</view>
+    <view class='loading' hidden='{{hasmore}}'>没有更多数据啦</view>
+  </view>
+</tab-view>

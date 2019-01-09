@@ -1,0 +1,71 @@
+/* pages/tabview/tabview.wxss */
+
+.order-item {
+  flex-direction: row;
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid whitesmoke;
+  justify-content: center;
+  margin-left: 20rpx;
+  display: flex;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  overflow: hidden;
+  align-items: center;
+}
+
+.news_image {
+  width: 150rpx;
+  height: 120rpx;
+  float: left;
+}
+
+.news_title {
+  width: 580rpx;
+  margin-bottom: 40rpx;
+  font-size: 26rpx;
+}
+
+.news_text_author {
+  font-size: 24rpx;
+  text-align: left;
+  color: #626262;
+}
+
+.news_text_time {
+  font-size: 24rpx;
+  line-height: 1;
+  text-align: right;
+  margin-right: 20rpx;
+  color: #626262;
+}
+
+.content_container {
+  flex: 1;
+  display: inherit;
+  margin-left: 15rpx;
+  float: left;
+  margin-right: 34rpx;
+  flex-direction: column;
+}
+
+.news_text_style {
+  display: inherit;
+  justify-content: space-between;
+  margin-top: 10rpx;
+}
+
+/*处理字符串过长的展示*/
+
+.news_text {
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.loading{
+	text-align: center;
+	color:#999;
+	font-size:16px;
+}

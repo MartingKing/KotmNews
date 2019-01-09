@@ -1,0 +1,35 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/news/news",
+    "pages/logs/logs",
+    "pages/detail/detail"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "KOTM-NEWS",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#181818",
+    "selectedColor": "#dd1919",
+    "borderStyle": "#181818",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/icon-user.png",
+        "selectedIconPath": "images/icon-user-a.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/news/news",
+        "iconPath": "images/icon-news.png",
+        "selectedIconPath": "images/icon-news-a.png",
+        "text": "资讯"
+      }
+    ]
+  },
+  "debug":true
+}

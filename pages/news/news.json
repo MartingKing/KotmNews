@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "tab-view": "../../components/tab-view/tab-view"
+  },
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50,
+  "navigationBarTitleText": "KOTM-NEWS"
+}
